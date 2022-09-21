@@ -1,7 +1,8 @@
 input = require('sync-input');
+let habitat = [];
+let prompt;
 
-camel = `
-Switching on the camera in the camel habitat...
+habitat.push(`Switching on the camera in the camel habitat...
  ___.-''''-.
 /___  @    |
 ',,,,.     |         _.'''''''._
@@ -19,9 +20,9 @@ Switching on the camera in the camel habitat...
             ; ;    ! !    ! !     ; ;
            ;,,      !,!   !,!     ;,;
            /_I      L_I   L_I     /_I
-Look at that! Our little camel is sunbathing!`;
+Look at that! Our little camel is sunbathing!`);
 
-lion = `
+habitat.push(`
 Switching on the camera in the lion habitat...
                                                ,w.
                                              ,YWMMw  ,M  ,
@@ -37,9 +38,9 @@ WMMm__,-'.'     /      _.\\      F'''-+,,   ;_,_.dMMMMMMMM[,_ / \`=_}
           /  .'             /  (       .'  /     Ww._     \`.  \`"
          /  Y,              \`,  \`-,=,_{   ;      MMMP\`""-,  \`-._.-,
         (--, )                \`,_ / \`) \\/"")      ^"      \`-, -;"\\:
-The lion is roaring!`;
+The lion is roaring!`);
 
-deer = `
+habitat.push(`
 Switching on the camera in the deer habitat...
    /|       |\\
 \`__\\\\       //__'
@@ -65,9 +66,9 @@ Switching on the camera in the deer habitat...
            | || |           | |   | |
            |_||_|           |_|   |_|
           /_//_/           /_/   /_/
-Our 'Bambi' looks hungry. Let's go to feed it!`;
+Our 'Bambi' looks hungry. Let's go to feed it!`);
 
-goose = `
+habitat.push(`
 Switching on the camera in the goose habitat...
 
                                     _
@@ -81,9 +82,9 @@ Switching on the camera in the goose habitat...
   <\`-       (__< <           :
    (__        (_<_<          ;
     \`------------------------------------------
-The goose is staring intently at you... Maybe it's time to change the channel?`;
+The goose is staring intently at you... Maybe it's time to change the channel?`);
 
-bat = `
+habitat.push(`
 Switching on the camera in the bat habitat...
 _________________               _________________
  ~-.              \\  |\\___/|  /              .-~
@@ -96,9 +97,9 @@ _________________               _________________
            /___      /\\   /\\      ___\\
                 ~-. /  \\_/  \\ .-~
                    V         V
-This bat looks like it’s doing fine.`;
+This bat looks like it’s doing fine.`);
 
-rabbit = `
+habitat.push(`
 Switching on the camera in the rabbit habitat...
          ,
         /|      __
@@ -119,10 +120,7 @@ Switching on the camera in the rabbit habitat...
  l       I     !
  ]\\      _\\    /"\\
 (" ~----( ~   Y.  )
-It looks like we will soon have more rabbits!`;
-
-habitat = [camel, lion, deer, goose, bat, rabbit];
-let prompt;
+It looks like we will soon have more rabbits!`);
 
 do {
     prompt = input("Please enter the number of the habitat you would like to view: ");
