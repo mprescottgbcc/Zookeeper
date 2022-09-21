@@ -1,6 +1,7 @@
 input = require('sync-input');
 let habitat = [];
 let prompt;
+let index;
 
 habitat.push(`Switching on the camera in the camel habitat...
  ___.-''''-.
@@ -124,10 +125,18 @@ It looks like we will soon have more rabbits!`);
 
 do {
     prompt = input("Please enter the number of the habitat you would like to view: ");
+    index = Number(prompt);
+
     if (prompt === 'exit') {
         break;
     }
-    console.log(`${habitat[prompt]}\n`);
+
+    if (habitat[index] === undefined) {
+        console.log("No such habitat exists!!\n");
+        continue;
+    }
+
+    console.log(`${habitat[index]}\n`);
 } while (true);
 
 console.log("See you later!");
